@@ -1,0 +1,57 @@
+@import url(./normalize.css);
+
+:root {
+  --bg-main: #1f2430;
+  --table-bg: #ffffff;
+  --table-header-bg: #f1f1f1;
+  --table-header-hover-bg: #e7edf4;
+  --border-color: #e3e6ea;
+  --text-white: #ffffff;
+  --text-primary: #2c2f36;
+  --text-secondary: #6b7280;
+  --hover-row: #f9fafb;
+  --button-primary: #5865f2;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background:
+    radial-gradient(circle at 20% 20%,
+      rgba(88, 101, 242, 0.15),
+      transparent 40%),
+    radial-gradient(circle at 80% 30%,
+      rgba(0, 180, 216, 0.12),
+      transparent 40%),
+    linear-gradient(135deg,
+      #1e2230,
+      #1f2430 40%,
+      #1a1f2b);
+  font-size: 1rem;
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 50% 100%,
+      rgba(255, 255, 255, 0.03),
+      transparent 60%);
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1400px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+p {
+  color: var(--text-white);
+  font-size: 1rem;
+}

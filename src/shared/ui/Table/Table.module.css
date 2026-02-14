@@ -1,0 +1,73 @@
+.wrapper {
+    width: 100%;
+    max-width: 1400px;
+    margin: 2rem auto;
+    background-color: var(--table-bg);
+    border-radius: 1rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    overflow: auto;
+    max-height: 100vh;
+    scrollbar-width: thin;
+    outline: none;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.table thead th {
+    position: sticky;
+    top: 0;
+    background-color: var(--table-header-bg);
+    z-index: 1;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.15);
+    position: relative;
+    user-select: none;
+}
+
+.table thead th:first-child {
+    border-top-left-radius: 0.75rem;
+}
+
+.table thead th:last-child {
+    border-top-right-radius: 0.75rem;
+}
+
+.table th,
+.table td {
+    padding: 1rem 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    text-align: center;
+}
+
+/* .table thead tr:first-of-type th {
+    resize: horizontal;
+    overflow: hidden;
+    min-width: 50px;
+} */
+
+.table tr:last-child td {
+    border-bottom: 0;
+}
+
+.table th {
+    background-color: var(--table-header-bg);
+    font-weight: 600;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    min-width: 50px;
+}
+
+.table th:hover {
+    background-color: var(--table-header-hover-bg);
+}
+
+.table tr:hover td {
+    background-color: var(--hover-row);
+}

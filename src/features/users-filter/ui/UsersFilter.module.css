@@ -1,0 +1,63 @@
+.usersFilter {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .usersFilter {
+        flex-direction: column;
+    }
+
+    .usersFilter>* {
+        width: 100%;
+    }
+}
+
+.usersFilterSelect,
+.usersFilterInput {
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    background: var(--table-header-bg);
+    color: var(--text-primary);
+    outline: none;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.usersFilterSelect:focus,
+.usersFilterInput:focus {
+    border-color: var(--button-primary);
+    box-shadow: 0 0 0 2px rgba(88, 101, 242, 0.3);
+}
+
+.usersFilterInput:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.usersFilterReset {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background: var(--button-primary);
+    color: var(--text-white);
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+.usersFilterReset:hover {
+    opacity: 0.9;
+}
+
+.usersFilterReset:active {
+    transform: scale(0.97);
+}
+
+.usersFilterReset:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

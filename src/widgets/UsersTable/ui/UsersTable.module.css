@@ -1,0 +1,25 @@
+.loadingInfo {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.resizer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    cursor: col-resize;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.resizer:hover,
+.resizer.active {
+    background-color: #3498db;
+}
+
+.table {
+    margin-bottom: 1rem;
+}
